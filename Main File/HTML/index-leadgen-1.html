@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<!-- Meta
+	============================================= -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<!-- Performance Optimizations -->
+	<meta http-equiv="Cache-Control" content="public, max-age=31536000">
+	<meta http-equiv="Expires" content="31536000">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+	<!-- SEO Meta -->
+	<meta name="author" content="XafeAds">
+	<meta name="description" content="Specialized account recovery and compliance solutions for digital advertising platforms. Recover your suspended Google, Facebook, and other ad accounts quickly.">
+	<meta name="keywords" content="account recovery, ad account suspension, Google Ads recovery, Facebook Ads recovery, compliance solutions, advertising platforms">
+	<meta name="robots" content="index, follow">
+	
+	<!-- Open Graph -->
+	<meta property="og:title" content="XafeAds - Account Recovery & Compliance Solutions">
+	<meta property="og:description" content="Recover your suspended advertising accounts with our specialized solutions.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="css/css-assets.css" rel="stylesheet" media="all">
+	<link href="css/style.css" rel="stylesheet" media="all">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Favicon
+	============================================= -->
+	<link rel="shortcut icon" href="images/general-elements/favicon/favicon.png">
+	<link rel="apple-touch-icon" href="images/general-elements/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/general-elements/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/general-elements/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Title
+	============================================= -->
+	<title>XafeAds - Account Recovery & Compliance Solutions</title>
+	
+	<!-- Custom Styles for Statistics -->
+	<style>
+		.stat-box {
+			padding: 30px 20px;
+			margin-bottom: 30px;
+			background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+			border-radius: 15px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+			transition: all 0.3s ease;
+			border: 1px solid #e9ecef;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.stat-box:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+		}
+		
+		.stat-box::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background: linear-gradient(90deg, #007bff, #0056b3);
+		}
+		
+		.stat-number {
+			font-size: 3.5rem;
+			font-weight: 700;
+			color: #007bff;
+			margin-bottom: 15px;
+			line-height: 1;
+		}
+		
+		.stat-number .plus,
+		.stat-number .percent,
+		.stat-number .million {
+			font-size: 2.5rem;
+			color: #0056b3;
+		}
+		
+		.stat-description {
+			font-size: 0.95rem;
+			color: #6c757d;
+			line-height: 1.5;
+			font-weight: 400;
+		}
+		
+		.mt-50 {
+			margin-top: 50px;
+		}
+		
+		/* Section background colors */
+		#intro-features .section-content {
+			background-color: #f8f9fa; /* Very light grey */
+		}
+		
+		#some-facts .section-content {
+			background-color: #e9ecef; /* Slightly darker grey */
+		}
+		
+		#cta-title-1 .section-content {
+			background-color: #f8f9fa; /* Very light grey */
+		}
+		
+		#cta-form .section-content {
+			background-color: #e9ecef; /* Slightly darker grey */
+		}
+		
+		@media (max-width: 768px) {
+			.stat-number {
+				font-size: 2.5rem;
+			}
+			.stat-number .plus,
+			.stat-number .percent,
+			.stat-number .million {
+				font-size: 1.8rem;
+			}
+			.stat-description {
+				font-size: 0.85rem;
+			}
+		}
+		
+		/* Platform Cards Styles */
+		.platform-grid {
+			margin-top: 50px;
+		}
+		
+		.platform-card {
+			background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+			border-radius: 15px;
+			padding: 20px 15px;
+			margin-bottom: 30px;
+			box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			border: 1px solid #e9ecef;
+			position: relative;
+			overflow: hidden;
+			height: 120px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		
+		.platform-card:hover {
+			transform: translateY(-8px) scale(1.02);
+			box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+			background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+			border-color: #007bff;
+		}
+		
+		.platform-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background: linear-gradient(90deg, #007bff, #0056b3);
+		}
+		
+		.platform-card.featured {
+			background: linear-gradient(135deg, #0056b3 0%, #007bff 100%);
+			color: white;
+			transform: scale(1.05);
+			box-shadow: 0 15px 35px rgba(0,86,179,0.3);
+		}
+		
+		.platform-card.featured::before {
+			background: linear-gradient(90deg, #ffffff, #f8f9fa);
+		}
+		
+		.platform-card:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+		}
+		
+		.platform-card.featured:hover {
+			transform: scale(1.05) translateY(-8px);
+		}
+		
+		.platform-header h4 {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 8px;
+			color: #2c3e50;
+			text-align: center;
+			transition: all 0.3s ease;
+		}
+		
+		.platform-card:hover .platform-header h4 {
+			color: #ffffff;
+		}
+		
+		.platform-card.featured .platform-header h4 {
+			color: white;
+		}
+		
+		.platform-content p {
+			font-size: 16px;
+			line-height: 1.4;
+			color: #6c757d;
+			text-align: center;
+			margin: 0;
+			transition: all 0.3s ease;
+		}
+		
+		.platform-card:hover .platform-content p {
+			color: rgba(255,255,255,0.9);
+		}
+		
+		.platform-card.featured .platform-content p {
+			color: rgba(255,255,255,0.9);
+		}
+		
+		.platform-subtitle {
+			font-weight: 600;
+			margin-bottom: 15px !important;
+			font-size: 0.9rem;
+		}
+		
+		.platform-details {
+			margin-top: 10px;
+		}
+		
+		.platform-details ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.platform-details li {
+			font-size: 0.8rem;
+			margin-bottom: 8px;
+			padding-left: 15px;
+			position: relative;
+			line-height: 1.4;
+		}
+		
+		.platform-details li:before {
+			content: '✓';
+			position: absolute;
+			left: 0;
+			color: #44bfff;
+			font-weight: bold;
+		}
+		
+		.platform-card.featured .platform-details li {
+			color: rgba(255,255,255,0.8);
+		}
+		
+		.platform-card.featured .platform-details li:before {
+			color: #ffffff;
+		}
+		
+		/* Responsive adjustments for platform cards */
+		@media (max-width: 992px) {
+			.platform-card {
+				height: 110px;
+				padding: 18px 15px;
+			}
+			
+			.platform-header h4 {
+				font-size: 1.3rem;
+			}
+			
+			.platform-content p {
+				font-size: 0.9rem;
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.platform-card {
+				height: 100px;
+				padding: 15px 12px;
+				margin-bottom: 20px;
+			}
+			
+			.platform-card.featured {
+				transform: scale(1.02);
+			}
+			
+			.platform-card.featured:hover {
+				transform: scale(1.02) translateY(-5px);
+			}
+			
+			.platform-header h4 {
+				font-size: 1.2rem;
+				margin-bottom: 10px;
+			}
+			
+			.platform-content p {
+				font-size: 0.85rem;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			.platform-card {
+				height: 90px;
+				padding: 12px 10px;
+			}
+			
+			.platform-header h4 {
+				font-size: 1.1rem;
+			}
+			
+			.platform-content p {
+				font-size: 0.8rem;
+			}
+		}
+		
+		/* Banner Layout Fixes */
+		.banner-center-box {
+			padding: 30px 0 50px !important;
+		}
+		
+		.banner-parallax {
+			min-height: 700px !important;
+		}
+		
+		.banner-parallax .row {
+			align-items: center;
+			min-height: 700px;
+		}
+		
+		/* Form positioning fix */
+		.banner-form {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+		}
+		
+		.banner-form .box-form {
+			margin-top: 0;
+			width: 100%;
+			max-width: 400px;
+		}
+		
+		/* Process Steps Styles */
+		.process-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin: 50px 0;
+			padding: 0 20px;
+		}
+		
+		.process-step {
+			flex: 1;
+			text-align: center;
+			position: relative;
+			max-width: 250px;
+		}
+		
+		.step-icon {
+			margin-bottom: 20px;
+		}
+		
+		.icon-circle {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+			color: white;
+			font-size: 28px;
+			font-weight: 700;
+			box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+			transition: all 0.3s ease;
+		}
+		
+		.process-step:hover .icon-circle {
+			transform: scale(1.1);
+			box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+		}
+		
+		.step-info h4 {
+			font-size: 18px;
+			font-weight: 700;
+			color: #2d3748;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		
+		.step-info p {
+			font-size: 15px;
+			color: #718096;
+			line-height: 1.5;
+			margin: 0;
+		}
+		
+		.step-connector {
+			position: absolute;
+			top: 40px;
+			right: -50%;
+			width: 100%;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 1;
+		}
+		
+		.step-connector::after {
+			content: '→';
+			font-size: 28px;
+			color: #667eea;
+			background: white;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+			transition: all 0.3s ease;
+			font-weight: bold;
+		}
+		
+		.step-connector:hover::after {
+			background: #667eea;
+			color: white;
+			transform: scale(1.1);
+		}
+		
+		.process-step:last-child .step-connector {
+			display: none;
+		}
+		
+		/* ===== RESPONSIVE DESIGN ===== */
+		
+		/* Large Tablets and Small Laptops */
+		@media (max-width: 1024px) {
+			.container {
+				max-width: 95%;
+			}
+			
+			.banner-center-box {
+				padding: 60px 20px;
+			}
+			
+			.banner-form {
+				margin-top: 30px;
+			}
+			
+			.process-container {
+				padding: 0 10px;
+			}
+			
+			.expertise-grid {
+				max-width: 100%;
+			}
+			
+			.expertise-card {
+				width: 300px;
+				height: 130px;
+			}
+			
+			.expertise-spacer {
+				width: 300px;
+			}
+		}
+		
+		/* Tablets */
+		@media (max-width: 768px) {
+			.container {
+				max-width: 100%;
+				padding: 0 15px;
+			}
+			
+			/* Banner Section */
+			.banner-center-box {
+				padding: 40px 15px;
+			}
+			
+			.banner-center-box h1 {
+				font-size: 32px;
+				line-height: 1.3;
+			}
+			
+			.banner-center-box p {
+				font-size: 16px;
+				margin-bottom: 25px;
+			}
+			
+			.banner-buttons {
+				flex-direction: column;
+				gap: 15px;
+			}
+			
+			.banner-buttons .btn {
+				width: 100%;
+				max-width: 300px;
+				margin: 0 auto;
+			}
+			
+			.banner-form {
+				margin-top: 20px;
+			}
+			
+			/* Process Steps */
+			.process-container {
+				flex-direction: column;
+				align-items: center;
+				gap: 30px;
+				padding: 0;
+			}
+			
+			.process-step {
+				max-width: 300px;
+			}
+			
+			.step-connector {
+				display: none;
+			}
+			
+			/* Expertise Section */
+			.expertise-row {
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+			}
+			
+			.expertise-spacer {
+				display: none;
+			}
+			
+			.expertise-card {
+				width: 100%;
+				max-width: 400px;
+				height: auto;
+				min-height: 120px;
+				padding: 20px 15px;
+			}
+			
+			/* Platform Cards */
+			.platform-grid .row {
+				margin: 0;
+			}
+			
+			.platform-card {
+				margin-bottom: 20px;
+			}
+			
+			/* Statistics */
+			.stat-box {
+				margin-bottom: 20px;
+			}
+			
+			/* Mobile Contact Bar */
+			.mobile-contact-bar {
+				display: flex;
+			}
+			
+			.sticky-action-buttons {
+				display: none;
+			}
+			
+			body {
+				padding-bottom: 80px;
+			}
+		}
+		
+		/* Mobile Phones */
+		@media (max-width: 480px) {
+			.container {
+				padding: 0 10px;
+			}
+			
+			/* Banner Section */
+			.banner-center-box {
+				padding: 30px 10px;
+			}
+			
+			.banner-center-box h1 {
+				font-size: 28px;
+				line-height: 1.2;
+			}
+			
+			.banner-center-box p {
+				font-size: 14px;
+				margin-bottom: 20px;
+			}
+			
+			.banner-buttons .btn {
+				font-size: 14px;
+				padding: 12px 20px;
+			}
+			
+			/* Form */
+			.box-form {
+				padding: 20px 15px;
+			}
+			
+			.form-control {
+				height: 45px;
+				font-size: 14px;
+			}
+			
+			/* Process Steps */
+			.process-step {
+				max-width: 280px;
+			}
+			
+			.icon-circle {
+				width: 60px;
+				height: 60px;
+			}
+			
+			.step-info h4 {
+				font-size: 16px;
+			}
+			
+			.step-info p {
+				font-size: 13px;
+			}
+			
+			/* Expertise Cards */
+			.expertise-card {
+				padding: 15px 12px;
+				min-height: 100px;
+			}
+			
+			.expertise-icon {
+				width: 40px;
+				height: 40px;
+				font-size: 16px;
+			}
+			
+			.expertise-content h4 {
+				font-size: 14px;
+			}
+			
+			.expertise-content p {
+				font-size: 12px;
+			}
+			
+			/* Platform Cards */
+			.platform-card {
+				height: 100px;
+				padding: 15px 10px;
+			}
+			
+			.platform-header h4 {
+				font-size: 14px;
+			}
+			
+			.platform-content p {
+				font-size: 12px;
+			}
+			
+			/* Statistics */
+			.stat-box {
+				padding: 20px 15px;
+			}
+			
+			.stat-number {
+				font-size: 24px;
+			}
+			
+			.stat-description {
+				font-size: 12px;
+			}
+			
+			/* Section Titles */
+			.section-title h2 {
+				font-size: 24px;
+			}
+			
+			.section-title p {
+				font-size: 14px;
+			}
+			
+			/* Mobile Contact Bar */
+			.mobile-contact-bar {
+				padding: 10px 15px;
+			}
+			
+			.contact-btn {
+				font-size: 12px;
+				padding: 8px 12px;
+			}
+		}
+		
+		/* Extra Small Mobile */
+		@media (max-width: 360px) {
+			.banner-center-box h1 {
+				font-size: 24px;
+			}
+			
+			.banner-buttons .btn {
+				font-size: 13px;
+				padding: 10px 15px;
+			}
+			
+			.expertise-card {
+				padding: 12px 10px;
+			}
+			
+			.platform-card {
+				height: 90px;
+				padding: 12px 8px;
+			}
+		}
+		
+		/* Landscape Mobile */
+		@media (max-width: 768px) and (orientation: landscape) {
+			.banner-center-box {
+				padding: 20px 15px;
+			}
+			
+			.banner-center-box h1 {
+				font-size: 24px;
+			}
+			
+			.banner-buttons {
+				flex-direction: row;
+				justify-content: center;
+				gap: 10px;
+			}
+			
+			.banner-buttons .btn {
+				width: auto;
+				max-width: none;
+			}
+		}
+		
+		/* High DPI Displays */
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+			.expertise-icon,
+			.icon-circle,
+			.step-circle {
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		}
+		
+		/* ===== WEBSITE OPTIMIZATION ===== */
+		
+		/* Critical CSS - Above the fold */
+		.banner-parallax {
+			will-change: transform;
+			contain: layout style paint;
+		}
+		
+		/* Optimize animations */
+		* {
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+		}
+		
+		/* Reduce repaints */
+		.btn, .expertise-card, .platform-card, .process-step {
+			transform: translateZ(0);
+			-webkit-transform: translateZ(0);
+		}
+		
+		/* Optimize images */
+		img {
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: crisp-edges;
+		}
+		
+		/* Reduce layout shifts */
+		.container {
+			contain: layout;
+		}
+		
+		/* Optimize fonts */
+		body {
+			font-display: swap;
+			text-rendering: optimizeSpeed;
+		}
+		
+		/* Reduce animation complexity */
+		@keyframes ctaFormPulse {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.01); }
+		}
+		
+		@keyframes getHelpPulse {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.01); }
+		}
+		
+		@keyframes recoveryPulse {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.01); }
+		}
+		
+		/* Optimize hover effects */
+		.btn:hover, .expertise-card:hover, .platform-card:hover {
+			transform: translateY(-2px) translateZ(0);
+			-webkit-transform: translateY(-2px) translateZ(0);
+		}
+		
+		/* Reduce box-shadow complexity */
+		.btn:hover, .expertise-card:hover, .platform-card:hover {
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		}
+		
+		/* Optimize gradients */
+		.icon-circle, .step-circle {
+			background: #6b46c1;
+		}
+		
+		/* Reduce CSS complexity */
+		.expertise-card, .platform-card, .process-step {
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+		}
+		
+		/* Optimize mobile performance */
+		@media (max-width: 768px) {
+			* {
+				animation-duration: 1s !important;
+			}
+			
+			.btn:hover {
+				transform: none;
+			}
+		}
+		
+		/* Get Help Now Button Styling */
+		.btn.btn-primary.btn-block {
+			position: relative;
+			overflow: hidden;
+			transition: all 0.3s ease;
+			animation: getHelpPulse 2s infinite;
+			background: linear-gradient(90deg, #44bfff 0%, #4777f4 100%);
+			border: none;
+		}
+		
+		.btn.btn-primary.btn-block::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, #4777f4 0%, #44bfff 100%);
+			transition: left 0.5s ease;
+			z-index: 1;
+		}
+		
+		.btn.btn-primary.btn-block:hover::before {
+			left: 0;
+		}
+		
+		.btn.btn-primary.btn-block:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 25px rgba(68, 191, 255, 0.3);
+		}
+		
+		.btn.btn-primary.btn-block span {
+			position: relative;
+			z-index: 2;
+		}
+		
+		@keyframes getHelpPulse {
+			0% {
+				transform: scale(1);
+				box-shadow: 0 0 0 0 rgba(68, 191, 255, 0.4);
+			}
+			70% {
+				transform: scale(1.02);
+				box-shadow: 0 0 0 10px rgba(68, 191, 255, 0);
+			}
+			100% {
+				transform: scale(1);
+				box-shadow: 0 0 0 0 rgba(68, 191, 255, 0);
+			}
+		}
+		
+		/* CTA Form Buttons Styling */
+		.cta-form-btn {
+			position: relative;
+			overflow: hidden;
+			transition: all 0.3s ease;
+			animation: ctaFormPulse 2s infinite;
+			background: #44bfff;
+			border: none;
+			color: white;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			margin-bottom: 10px;
+		}
+		
+		.cta-form-btn::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, #4777f4 0%, #44bfff 100%);
+			transition: left 0.5s ease;
+			z-index: 1;
+		}
+		
+		.cta-form-btn:hover::before {
+			left: 0;
+		}
+		
+		.cta-form-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 25px rgba(68, 191, 255, 0.3);
+		}
+		
+		.cta-form-btn span {
+			position: relative;
+			z-index: 2;
+		}
+		
+		@keyframes ctaFormPulse {
+			0% {
+				transform: scale(1);
+				box-shadow: 0 0 0 0 rgba(68, 191, 255, 0.4);
+			}
+			70% {
+				transform: scale(1.02);
+				box-shadow: 0 0 0 10px rgba(68, 191, 255, 0);
+			}
+			100% {
+				transform: scale(1);
+				box-shadow: 0 0 0 0 rgba(68, 191, 255, 0);
+			}
+		}
+		
+		/* Footer Styling */
+		#footer {
+			background: #2c3e50;
+			color: #bdc3c7;
+		}
+		
+		#footer-bar-1 {
+			background: #2c3e50;
+			padding: 40px 0;
+		}
+		
+		#footer-bar-2 {
+			background: #34495e;
+			border-top: 1px solid #4a5f7a;
+			padding: 20px 0;
+		}
+		
+		#footer .box-content h4 {
+			color: #ecf0f1;
+			font-weight: 700;
+			margin-bottom: 15px;
+			font-size: 18px;
+		}
+		
+		#footer .box-content p {
+			color: #bdc3c7;
+			line-height: 1.6;
+			margin: 0;
+		}
+		
+		#footer .box-content p a {
+			color: #bdc3c7;
+			text-decoration: underline;
+			transition: color 0.3s ease;
+		}
+		
+		#footer .box-content p a:hover {
+			color: #3498db;
+		}
+		
+		.copyrights-message {
+			color: #bdc3c7;
+			font-size: 14px;
+		}
+		
+		/* Banner Buttons Styling */
+		.banner-buttons .btn-secondary {
+			border: 2px solid #44bfff;
+			border-radius: 8px;
+			background: white;
+			color: #44bfff;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			transition: all 0.3s ease;
+		}
+		
+		.banner-buttons .btn-secondary:hover {
+			background: #44bfff;
+			color: white;
+			transform: translateY(-2px);
+			box-shadow: 0 8px 20px rgba(68, 191, 255, 0.3);
+		}
+		
+		/* Start Your Recovery Button Animations */
+		.btn.scroll-to.x-large.colorful.hover-colorful-darken {
+			position: relative;
+			overflow: hidden;
+			transition: all 0.3s ease;
+			animation: recoveryPulse 2s infinite;
+		}
+		
+		.btn.scroll-to.x-large.colorful.hover-colorful-darken::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+			transition: left 0.5s;
+		}
+		
+		.btn.scroll-to.x-large.colorful.hover-colorful-darken:hover::before {
+			left: 100%;
+		}
+		
+		.btn.scroll-to.x-large.colorful.hover-colorful-darken:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+		}
+		
+		.btn.scroll-to.x-large.colorful.hover-colorful-darken:active {
+			transform: translateY(-1px);
+		}
+		
+		@keyframes recoveryPulse {
+			0% {
+				transform: scale(1);
+				box-shadow: 0 0 0 0 rgba(68, 191, 255, 0.6);
+			}
+			70% {
+				transform: scale(1.05);
+				box-shadow: 0 0 0 15px rgba(68, 191, 255, 0);
+			}
+			100% {
+				transform: scale(1);
+				box-shadow: 0 0 0 0 rgba(68, 191, 255, 0);
+			}
+		}
+		
+		/* Our Expertise Section Styles */
+		.expertise-grid {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.expertise-row {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 30px;
+			margin-bottom: 30px;
+		}
+		
+		.expertise-spacer {
+			width: 350px;
+		}
+		
+		.expertise-card {
+			background: #f8f9fa;
+			border-radius: 12px;
+			padding: 25px 20px;
+			width: 350px;
+			height: 140px;
+			display: flex;
+			align-items: flex-start;
+			gap: 15px;
+			transition: all 0.3s ease;
+			border: 1px solid #e9ecef;
+		}
+		
+		.expertise-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+			border-color: #6b46c1;
+		}
+		
+		.expertise-icon {
+			flex-shrink: 0;
+			width: 50px;
+			height: 50px;
+			background: linear-gradient(135deg, #6b46c1 0%, #553c9a 100%);
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			font-size: 20px;
+		}
+		
+		.expertise-content h4 {
+			font-size: 16px;
+			font-weight: 700;
+			color: #2d3748;
+			margin-bottom: 8px;
+			line-height: 1.3;
+		}
+		
+		.expertise-content p {
+			font-size: 14px;
+			color: #64748b;
+			line-height: 1.4;
+			margin: 0;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+		
+		@media (max-width: 768px) {
+			.expertise-row {
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+			}
+			
+			.expertise-spacer {
+				display: none;
+			}
+			
+			.expertise-card {
+				width: 100%;
+				max-width: 400px;
+				height: auto;
+				min-height: 120px;
+				padding: 20px 15px;
+			}
+			
+			.expertise-icon {
+				width: 45px;
+				height: 45px;
+				font-size: 18px;
+			}
+			
+			.expertise-content h4 {
+				font-size: 15px;
+			}
+			
+			.expertise-content p {
+				font-size: 13px;
+			}
+		}
+		
+
+		
+		@media (max-width: 768px) {
+			.how-it-works-step {
+				padding: 15px 10px;
+				height: 200px;
+			}
+			
+			.step-circle {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.step-circle .step-number {
+				font-size: 20px;
+			}
+			
+			.how-it-works-step .step-content h4 {
+				font-size: 16px;
+			}
+			
+			.how-it-works-step .step-content p {
+				font-size: 13px;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			.how-it-works-step {
+				padding: 12px 8px;
+				height: 230px;
+				justify-content: flex-start;
+			}
+			
+			.step-circle {
+				margin: 25px auto 15px;
+			}
+			
+			.step-circle {
+				width: 45px;
+				height: 45px;
+			}
+			
+			.step-circle .step-number {
+				font-size: 18px;
+			}
+			
+			.how-it-works-step .step-content h4 {
+				font-size: 14px;
+			}
+			
+			.how-it-works-step .step-content p {
+				font-size: 12px;
+			}
+		}
+		
+		/* Mobile Sticky Contact Bar */
+		.mobile-contact-bar {
+			display: none;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			background: linear-gradient(135deg, #0056b3 0%, #007bff 100%);
+			box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+			border-top: 1px solid rgba(255,255,255,0.1);
+		}
+		
+		.contact-bar-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 60px;
+			padding: 0;
+		}
+		
+		.contact-btn {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			color: white;
+			text-decoration: none;
+			font-family: "Montserrat", sans-serif;
+			font-weight: 600;
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			transition: all 0.3s ease;
+			position: relative;
+		}
+		
+		.contact-btn:hover {
+			background-color: rgba(255,255,255,0.1);
+			color: white;
+			text-decoration: none;
+		}
+		
+		.contact-btn:active {
+			background-color: rgba(255,255,255,0.2);
+		}
+		
+		.contact-btn i {
+			font-size: 16px;
+			margin-bottom: 4px;
+			display: block;
+		}
+		
+		.contact-btn span {
+			font-size: 10px;
+			line-height: 1;
+		}
+		
+		.contact-divider {
+			width: 1px;
+			height: 40px;
+			background-color: rgba(255,255,255,0.3);
+			margin: 0 5px;
+		}
+		
+		.contact-btn-primary {
+			background-color: rgba(255,255,255,0.1);
+		}
+		
+		.contact-btn-primary:hover {
+			background-color: rgba(255,255,255,0.2);
+		}
+		
+		/* Show mobile contact bar only on mobile devices */
+		@media (max-width: 768px) {
+			.mobile-contact-bar {
+				display: block;
+			}
+			
+			/* Add bottom padding to body to prevent content from being hidden behind the sticky bar */
+			body {
+				padding-bottom: 60px;
+			}
+			
+			/* Hide the floating action buttons on mobile since we have the contact bar */
+			.sticky-action-buttons {
+				display: none;
+			}
+		}
+		
+		/* Adjust for very small screens */
+		@media (max-width: 480px) {
+			.contact-bar-container {
+				height: 55px;
+			}
+			
+			.contact-btn {
+				font-size: 11px;
+			}
+			
+			.contact-btn i {
+				font-size: 15px;
+				margin-bottom: 3px;
+			}
+			
+			.contact-btn span {
+				font-size: 9px;
+			}
+			
+			body {
+				padding-bottom: 55px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="scroll-progress"><div class="scroll-progress"><span class="scroll-percent"></span></div></div>
+
+	<!-- Document Full Container
+	============================================= -->
+	<div id="full-container">
+
+		<!-- Header
+		============================================= -->
+		<header id="header">
+
+			<div id="header-bar-1" class="header-bar">
+
+				<div class="header-bar-wrap">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="hb-content">
+									
+									<div class="header-logo">
+										<a href="index-leadgen-1.html">
+											<img src="./images/files/xafeads.avif" alt="XafeAds Logo" style="height: 40px; margin-right: 15px;">
+										</a>
+									</div><!-- .header-logo end -->
+									
+									<div class="hb-meta">
+									</div><!-- .hb-meta end -->
+								</div><!-- .hb-content end -->
+
+							</div><!-- .col-md-12 end -->
+						</div><!-- .row end -->
+					</div><!-- .container end -->
+
+				</div><!-- .header-bar-wrap -->
+
+			</div><!-- #header-bar-1 end -->
+
+		</header><!-- #header end -->
+	
+		<!-- Banner
+		============================================= -->
+		<section id="banner">
+
+			<div class="banner-parallax" data-banner-height="700">
+				<img src="http://via.placeholder.com/1920x1100?text=Image" alt="">
+				<div class="overlay-colored color-bg-gradient opacity-90"></div><!-- .overlay-colored end -->
+				<div class="slide-content">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-7">
+
+								<div class="banner-center-box text-white md-text-center">
+									<h1 class="animated fadeInDown" style="animation-delay: 0.2s">
+										Unlock Reliable Ad Compliance with XafeAds
+									</h1>
+									<div class="description animated fadeInUp" style="animation-delay: 0.4s">
+										Providing specialized account recovery and compliance management tailored to business advertising needs.
+									</div>
+									<div class="banner-buttons animated fadeInUp" style="animation-delay: 0.6s">
+										<a href="#cta-form" class="btn btn-secondary scroll-to">Get My Account Reviewed</a>
+										<a href="#cta-form" class="btn btn-secondary scroll-to">Schedule a Compliance Consultation</a>
+									</div>
+									
+								</div><!-- .banner-center-box end -->
+
+							</div><!-- .col-md-7 end -->
+
+							<div class="col-md-5">
+								<div class="banner-form animated fadeInRight" style="animation-delay: 0.6s">
+									<div class="box-form">
+										<div class="box-content">
+											<h4 class="text-center">Get Started Today</h4>
+											<p class="text-center">Recover your suspended accounts quickly</p>
+											<form id="form-banner" class="form-inline">
+												<div class="form-group">
+													<input type="text" name="name" class="form-control" placeholder="Full Name">
+												</div>
+												<div class="form-group">
+													<input type="email" name="email" class="form-control" placeholder="Email Address">
+												</div>
+												<div class="form-group">
+													<input type="text" name="phone" class="form-control" placeholder="Phone Number">
+												</div>
+												<div class="form-group">
+													<select name="issue" class="form-control">
+														<option value="">Select Your Issue</option>
+														<option value="account-suspension">Account Suspension</option>
+														<option value="compliance">Compliance Help</option>
+														<option value="other">Other</option>
+													</select>
+												</div>
+												<div class="form-group form-buttons">
+													<button type="submit" class="btn btn-primary btn-block"><span>Get Help Now</span></button>
+												</div>
+											</form>
+										</div>
+									</div><!-- .box-form end -->
+								</div><!-- .banner-form end -->
+
+							</div><!-- .col-md-5 end -->
+						</div><!-- .row end -->
+					</div><!-- .container end -->
+
+				</div><!-- .slide-content end -->
+				<div class="section-separator wave-1 bottom">
+					<div class="ss-content">
+						<img class="svg" src="images/general-elements/section-separators/wave-1.svg" alt="">
+					</div><!-- .ss-content -->
+				</div><!-- .section-separator -->				
+			</div><!-- .banner-parallax end -->
+
+		</section><!-- #banner end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div id="content-wrap">
+
+				<!-- === Intro Features =========== -->
+				<div id="intro-features" class="flat-section">
+
+					<div class="section-content">
+
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+								
+									<div class="section-title text-center">
+										<h2>Our Expertise</h2>
+									</div>
+									<div class="expertise-grid">
+										<!-- Top Row -->
+										<div class="expertise-row">
+											<div class="expertise-card">
+												<div class="expertise-icon">
+													<i class="fa fa-balance-scale"></i>
+											</div>
+												<div class="expertise-content">
+													<h4>Legal & Compliance Background</h4>
+													<p>Deep understanding of digital advertising regulations and platform-specific legal requirements</p>
+										</div>
+											</div>
+											
+											<div class="expertise-card">
+												<div class="expertise-icon">
+													<i class="fa fa-bullseye"></i>
+												</div>
+												<div class="expertise-content">
+													<h4>Platform-Specific Recovery Strategies</h4>
+													<p>Customized approaches for each advertising platform's unique appeal and recovery processes</p>
+										</div>
+									</div>
+								
+											<div class="expertise-card">
+												<div class="expertise-icon">
+													<i class="fa fa-search"></i>
+												</div>
+												<div class="expertise-content">
+													<h4>Custom Compliance Audits</h4>
+													<p>Comprehensive reviews of your advertising practices to identify and resolve policy violations</p>
+												</div>
+											</div>
+										</div>
+										
+										<!-- Bottom Row -->
+										<div class="expertise-row">
+											<div class="expertise-spacer"></div>
+											
+											<div class="expertise-card">
+												<div class="expertise-icon">
+													<i class="fa fa-shield"></i>
+												</div>
+												<div class="expertise-content">
+													<h4>Preventive Monitoring</h4>
+													<p>Ongoing surveillance to avoid future account issues and maintain advertising continuity</p>
+												</div>
+											</div>
+											
+											<div class="expertise-card">
+												<div class="expertise-icon">
+													<i class="fa fa-handshake-o"></i>
+												</div>
+												<div class="expertise-content">
+													<h4>Personalized Consultation</h4>
+													<p>Dedicated support and retainer services tailored to your business's advertising needs</p>
+												</div>
+											</div>
+											
+											<div class="expertise-spacer"></div>
+										</div>
+									</div>
+								
+								</div><!-- .col-md-12 end -->
+
+								<div class="divider-140 divider-md-100"></div>
+									
+								<div class="col-md-12">
+								
+									<div class="section-title text-center">
+										<span>Platform Expertise</span>
+										<h2>We Navigate the Toughest Ad Policies</h2>
+										<p>Our specialized expertise covers all major advertising platforms and their unique compliance challenges</p>
+									</div><!-- .section-title end -->
+								
+								</div><!-- .col-md-12 end -->
+								
+								<div class="col-md-12">
+									<div class="platform-grid">
+										<div class="row">
+											<!-- Top Row -->
+											<div class="col-md-4 col-sm-6">
+												<div class="platform-card featured">
+													<div class="platform-header">
+														<h4>Google Ads</h4>
+													</div>
+													<div class="platform-content">
+														<p>Unacceptable Business Practices & Circumventing Systems</p>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-4 col-sm-6">
+												<div class="platform-card featured">
+													<div class="platform-header">
+														<h4>Facebook Ads</h4>
+													</div>
+													<div class="platform-content">
+														<p>Restricted Products & Services</p>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-4 col-sm-6">
+												<div class="platform-card featured">
+													<div class="platform-header">
+														<h4>Meta Commerce</h4>
+													</div>
+													<div class="platform-content">
+														<p>Policy Violations & Account Recovery</p>
+													</div>
+												</div>
+											</div>
+											
+											<!-- Bottom Row -->
+											<div class="col-md-4 col-sm-6">
+												<div class="platform-card featured">
+													<div class="platform-header">
+														<h4>YouTube</h4>
+													</div>
+													<div class="platform-content">
+														<p>Monetization & Policy Violations</p>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-4 col-sm-6">
+												<div class="platform-card featured">
+													<div class="platform-header">
+														<h4>TikTok & Snapchat</h4>
+													</div>
+													<div class="platform-content">
+														<p>Advertising Policy Compliance</p>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-4 col-sm-6">
+												<div class="platform-card featured">
+													<div class="platform-header">
+														<h4>Multi-Platform</h4>
+													</div>
+													<div class="platform-content">
+														<p>Cross-platform compliance strategies</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- .col-md-12 end -->
+
+							</div><!-- .row end -->
+						</div><!-- .container end -->
+
+					</div><!-- .section-content end -->
+
+				</div><!-- .flat-section end -->
+
+
+
+				<!-- === Some Facts =========== -->
+				<div id="some-facts" class="flat-section">
+				
+					<div class="section-content">
+				
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									
+									<div class="section-title text-center">
+										<span>Our Impact</span>
+										<h2>Proven Results That Drive Business Growth</h2>
+										<p>
+											Our specialized expertise in ad compliance and account recovery has delivered measurable success across diverse business domains.
+										</p>
+									</div><!-- .section-title end -->
+									
+									<div class="row mt-50">
+										<div class="col-md-3 col-sm-6">
+											<div class="stat-box text-center">
+												<div class="stat-number">
+													<span class="counter-stats">150</span><span class="plus">+</span>
+												</div>
+												<div class="stat-description">
+													Accounts Unsuspended Across various Business domains and Policies
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-md-3 col-sm-6">
+											<div class="stat-box text-center">
+												<div class="stat-number">
+													<span class="counter-stats">70</span><span class="percent">%</span>
+												</div>
+												<div class="stat-description">
+													70% Lower TAT - 10 days is the average time it takes to reactivate from most egregious policies
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-md-3 col-sm-6">
+											<div class="stat-box text-center">
+												<div class="stat-number">
+													$<span class="counter-stats">2.7</span><span class="million">M</span>
+												</div>
+												<div class="stat-description">
+													$2.7+ Million Enabled by reactivating the suspended accounts and enabling their business
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-md-3 col-sm-6">
+											<div class="stat-box text-center">
+												<div class="stat-number">
+													<span class="counter-stats">18</span>
+												</div>
+												<div class="stat-description">
+													18 Agencies Safeguard their Accounts by partnering with us
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div><!-- .col-md-12 end -->
+							</div><!-- .row end -->
+						</div><!-- .container end -->
+
+					</div><!-- .section-content end -->
+
+				</div><!-- .flat-section end -->
+
+				<!-- === CTA Title 1 =========== -->
+				<div id="cta-title-1" class="flat-section">
+				
+					<div class="section-content">
+				
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 text-center">
+									<div class="section-title">
+										<h2>How It Works</h2>
+										<p>Our proven process to recover your suspended advertising accounts</p>
+									</div>
+								</div><!-- .col-md-12 end -->
+								
+								<div class="col-md-12">
+									<div class="process-container">
+										<div class="process-step">
+											<div class="step-icon">
+												<div class="icon-circle">1</div>
+											</div>
+											<div class="step-info">
+												<h4>Account Audit</h4>
+												<p>Identify violations & assess account status</p>
+											</div>
+											<div class="step-connector"></div>
+										</div>
+										
+										<div class="process-step">
+											<div class="step-icon">
+												<div class="icon-circle">2</div>
+											</div>
+											<div class="step-info">
+												<h4>Recovery Plan</h4>
+												<p>Customized steps to lift suspension</p>
+											</div>
+											<div class="step-connector"></div>
+										</div>
+										
+										<div class="process-step">
+											<div class="step-icon">
+												<div class="icon-circle">3</div>
+											</div>
+											<div class="step-info">
+												<h4>Compliance Partnering</h4>
+												<p>Ongoing support to prevent future blocks</p>
+											</div>
+											<div class="step-connector"></div>
+										</div>
+										
+										<div class="process-step">
+											<div class="step-icon">
+												<div class="icon-circle">4</div>
+											</div>
+											<div class="step-info">
+												<h4>Success Tracking</h4>
+												<p>Monitor performance & ensure success</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-12 text-center">
+									<a class="btn scroll-to x-large colorful hover-colorful-darken mt-40" href="#cta-form">Start Your Recovery</a>
+								</div><!-- .col-md-12 end -->
+				
+								</div><!-- .col-md-12 end -->
+							</div><!-- .row end -->
+						</div><!-- .container end -->
+				
+					</div><!-- .section-content end -->
+				
+				</div><!-- .flat-section end -->
+
+				<!-- === CTA Form =========== -->
+				<div id="cta-form" class="flat-section">
+				
+					<div class="section-content">
+				
+						<div class="container ">
+							<div class="row">
+								<div class="col-md-6 col-md-offset-3">
+				
+									<div class="cta-subscribe cta-subscribe-2 box-form">
+										<div class="box-content">
+											<div class="text-center mb-40">
+												<h2>Ready to Get Your Ad Accounts Back?</h2>
+												<p class="text-muted">Take the first step towards recovering your suspended accounts and ensuring compliance</p>
+											</div>
+											<form id="form-cta-subscribe-3" class="form-inline">
+												<div class="form-group">
+													<input type="text" name="name" class="form-control" placeholder="Full Name">
+												</div>
+												<div class="form-group">
+													<input type="email" name="email" class="form-control" placeholder="Email Address">
+												</div>
+												<div class="form-group">
+													<input type="text" name="phone" class="form-control" placeholder="Phone Number">
+												</div>
+										
+												<div class="form-group">
+													<textarea name="message" class="form-control" placeholder="Describe your issue..."></textarea>
+												</div>
+												<div class="form-group form-buttons">
+													<button type="submit" class="btn btn-primary cta-form-btn"><span>Recover My Account</span></button>
+													<button type="button" class="btn btn-primary cta-form-btn"><span>Book a Consultation</span></button>
+												</div>
+											</form>
+										</div>
+									</div><!-- .box-form end -->
+				
+								</div><!-- .col-md-6 end -->
+							</div><!-- .row end -->
+						</div><!-- .container end -->
+				
+					</div><!-- .section-content end -->
+				
+				</div><!-- .flat-section end -->
+
+			</div><!-- #content-wrap -->
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer">
+
+			<div id="footer-bar-1" class="footer-bar">
+			
+				<div class="footer-bar-wrap">
+			
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+			
+								<div class="fb-row">
+									<div class="col-sm-4">
+
+										<div class="box-info box-info-2 mb-sm-50">
+											<div class="box-content">
+												<h4>XafeAds</h4>
+												<p>
+													Specialized account recovery and compliance solutions for digital advertising platforms.
+												</p>
+											</div><!-- .box-content end -->
+										</div><!-- .box-info end -->
+
+									</div><!-- .col-sm-4 end -->
+									<div class="col-sm-4">
+									
+										<div class="box-info box-info-2 mb-sm-50">
+											<div class="box-content">
+												<h4>Quick Links</h4>
+												<p>
+													<a href="#intro-features">Services</a><br>
+													<a href="#some-facts">Policies</a><br>
+													<a href="#intro-features">Expertise</a><br>
+													<a href="#cta-form">Contact</a>
+												</p>
+											</div><!-- .box-content end -->
+										</div><!-- .box-info end -->
+									
+									</div><!-- .col-sm-4 end -->
+									<div class="col-sm-4">
+									
+										<div class="box-info box-info-2">
+											<div class="box-content">
+												<h4>Contact Info</h4>
+												<p>
+													Email: hello@xafeads.com<br>
+													Phone: + (555) 123-4567
+												</p>
+											</div><!-- .box-content end -->
+										</div><!-- .box-info end -->
+									
+									</div><!-- .col-sm-4 end -->
+								</div><!-- .fb-row end -->
+			
+							</div><!-- .col-md-12 end -->
+						</div><!-- .row end -->
+					</div><!-- .container end -->
+			
+				</div><!-- .footer-bar-wrap -->
+			
+			</div><!-- #footer-bar-1 end -->
+
+			<div id="footer-bar-2" class="footer-bar">
+
+				<div class="footer-bar-wrap">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="fb-row">
+									<div class="copyrights-message">© 2025 XafeAds. All rights reserved. Advisory services only.</div><!-- .social-icons end -->
+								</div><!-- .fb-row end -->
+
+							</div><!-- .col-md-12 end -->
+						</div><!-- .row end -->
+					</div><!-- .container end -->
+
+				</div><!-- .footer-bar-wrap -->
+
+			</div><!-- #footer-bar-2 end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #full-container end -->
+
+	<div class="sticky-action-buttons">
+		<a href="https://wa.me/1234567890" target="_blank" class="action-btn whatsapp-btn">
+			<i class="fa fa-whatsapp"></i>
+		</a>
+		<a href="#" class="action-btn scroll-top-btn scroll-top">
+			<i class="fa fa-angle-up"></i>
+		</a>
+	</div>
+
+	<!-- Mobile Sticky Contact Bar -->
+	<div class="mobile-contact-bar">
+		<div class="contact-bar-container">
+			<a href="tel:+1234567890" class="contact-btn call-btn">
+				<i class="fa fa-phone"></i>
+				<span>Call Us</span>
+			</a>
+			<div class="contact-divider"></div>
+			<a href="#cta-form" class="contact-btn contact-btn-primary">
+				<i class="fa fa-envelope"></i>
+				<span>Contact Us</span>
+			</a>
+		</div>
+	</div>
+
+	<!-- External JavaScripts - Optimized Loading
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jRespond.min.js" defer></script>
+	<script src="js/jquery.easing.min.js" defer></script>
+	<script src="js/jquery.waypoints.min.js" defer></script>
+	<script src="js/jquery.fitvids.js" defer></script>
+	<script src="js/jquery.stellar.js" defer></script>
+	<script src="js/owl.carousel.min.js" defer></script>
+	<script src="js/jquery.mb.YTPlayer.min.js" defer></script>
+	<script src="js/jquery.magnific-popup.min.js" defer></script>
+	<script src="js/jquery.ajaxchimp.min.js" defer></script>
+	<script src="js/jquery.validate.min.js" defer></script>
+	<script src="js/simple-scrollbar.min.js" defer></script>
+	<script src='js/functions.js' defer></script>
+	
+	<!-- Performance Optimization Script -->
+	<script>
+		// Preload critical resources
+		document.addEventListener('DOMContentLoaded', function() {
+			// Lazy load non-critical images
+			const images = document.querySelectorAll('img[data-src]');
+			const imageObserver = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const img = entry.target;
+						img.src = img.dataset.src;
+						img.classList.remove('lazy');
+						observer.unobserve(img);
+					}
+				});
+			});
+			
+			images.forEach(img => imageObserver.observe(img));
+			
+			// Optimize form submissions
+			const forms = document.querySelectorAll('form');
+			forms.forEach(form => {
+				form.addEventListener('submit', function(e) {
+					const submitBtn = form.querySelector('button[type="submit"]');
+					if (submitBtn) {
+						submitBtn.disabled = true;
+						submitBtn.textContent = 'Processing...';
+					}
+				});
+			});
+		});
+		
+		// Service Worker for caching (if supported)
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('/sw.js').catch(function(err) {
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
+	</script>
+
+</body>
+</html>
