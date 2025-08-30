@@ -92,10 +92,10 @@
 		}
 		
 		.stat-description {
-			font-size: 0.95rem;
+			font-size: 1.3rem; /* Significantly increased font size for better desktop readability */
 			color: #6c757d;
 			line-height: 1.5;
-			font-weight: 400;
+			font-weight: bold; /* Made font bolder for improved readability */
 		}
 		
 		.mt-50 {
@@ -105,6 +105,8 @@
 		/* Section background colors */
 		#intro-features .section-content {
 			background-color: #f8f9fa; /* Very light grey */
+			padding-top: 140px; /* Even further increased padding for a significantly larger section */
+			padding-bottom: 140px; /* Even further increased padding for a significantly larger section */
 		}
 		
 		#some-facts .section-content {
@@ -129,7 +131,7 @@
 				font-size: 1.8rem;
 			}
 			.stat-description {
-				font-size: 0.85rem;
+				font-size: 1.1rem; /* Significantly increased for better mobile readability */
 			}
 		}
 		
@@ -1079,8 +1081,8 @@
 			background: #f8f9fa;
 			border-radius: 12px;
 			padding: 25px 20px;
-			width: 350px;
-			height: 140px;
+			width: 380px; /* Increased width for larger cards */
+			height: 160px; /* Increased height for larger cards */
 			display: flex;
 			align-items: flex-start;
 			gap: 15px;
@@ -1472,7 +1474,10 @@
 				left: 15px;
 			}
 			.only-logo img {
-				height: 30px;
+				height: 40px; /* Increased logo size for tablets */
+			}
+			.sticky-action-buttons .action-btn i {
+				font-size: 30px; /* Bigger icons for sticky buttons on tablets */
 			}
 		}
 		@media (max-width: 480px) {
@@ -1481,7 +1486,10 @@
 				left: 10px;
 			}
 			.only-logo img {
-				height: 25px;
+				height: 35px; /* Increased logo size for smaller phones */
+			}
+			.sticky-action-buttons .action-btn i {
+				font-size: 24px; /* Bigger icons for sticky buttons on smaller phones */
 			}
 		}
 		/* Ensure banner-parallax has position relative to contain the absolute image */
@@ -1547,6 +1555,282 @@
 				font-size: 18px !important;
 			}
 		}
+
+		/* Main Navbar Styles */
+		#main-navbar {
+			background-color: #fff; /* White background */
+			padding: 15px 0; /* Vertical padding */
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+			z-index: 1020; /* Ensure it's above other content */
+			width: 100%;
+			position: fixed; /* Fixed at the top */
+			top: 0;
+			left: 0;
+		}
+		#main-navbar .container {
+			display: flex;
+			justify-content: space-between; /* Space out brand and nav links */
+			align-items: center;
+			max-width: 1200px; /* Limit content width */
+			margin: 0 auto;
+			padding: 0 15px; /* Horizontal padding */
+		}
+		#main-navbar .navbar-brand img {
+			height: 50px; /* Logo size */
+		}
+		#main-navbar .navbar-nav {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		#main-navbar .nav-item {
+			margin-left: 25px; /* Spacing between nav items */
+			position: relative;
+		}
+		#main-navbar .nav-link {
+			color: #333; /* Dark text color */
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 16px;
+			transition: color 0.3s ease;
+			padding: 5px 0;
+		}
+		#main-navbar .nav-link:hover,
+		#main-navbar .nav-link.active {
+			color: #007bff; /* Blue on hover/active */
+		}
+		#main-navbar .nav-item::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 1px;
+			height: 100%;
+			background-color: #dee2e6; /* Light grey separator */
+			transform: translateX(-12.5px);
+		}
+		#main-navbar .nav-item:first-child::after {
+			display: none; /* No separator before the first item */
+		}
+		/* Adjust body padding for fixed navbar */
+		body {
+			padding-top: 75px; /* Height of the navbar + some spacing */
+		}
+		@media (max-width: 768px) {
+			#main-navbar .navbar-nav {
+				display: none; /* Hide nav links on small screens, will need a mobile menu later */
+			}
+			#main-navbar .navbar-brand img {
+				height: 40px; /* Smaller logo on mobile */
+			}
+			body {
+				padding-top: 70px; /* Adjust body padding for smaller mobile navbar */
+			}
+		}
+		@media (max-width: 480px) {
+			#main-navbar .navbar-brand img {
+				height: 35px; /* Even smaller logo on very small screens */
+			}
+			body {
+				padding-top: 65px; /* Adjust body padding for very small mobile navbar */
+			}
+		}
+		/* Hamburger Menu */
+		.hamburger-menu {
+			display: none; /* Hidden by default on desktop */
+			background: none;
+			border: none;
+			cursor: pointer;
+			padding: 0;
+			position: relative;
+			width: 30px;
+			height: 20px;
+			margin-left: 0; /* Remove left margin */
+			order: 2; /* Place after the brand on mobile */
+			z-index: 1030; /* Ensure it's above other content */
+		}
+		.hamburger-menu span {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: #333;
+			margin-bottom: 6px;
+			transition: all 0.3s ease;
+		}
+		.hamburger-menu span:last-child {
+			margin-bottom: 0;
+		}
+		.hamburger-menu.active span:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+		}
+		.hamburger-menu.active span:nth-child(2) {
+			opacity: 0;
+		}
+		.hamburger-menu.active span:nth-child(3) {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+		/* Mobile Navigation Links */
+		.navbar-nav-mobile {
+			display: none; /* Hidden by default */
+			flex-direction: column;
+			position: absolute;
+			top: 100%; /* Position below the navbar */
+			left: 0;
+			width: 100%;
+			background-color: #fff; /* White background */
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+			list-style: none;
+			padding: 10px 0;
+			margin: 0;
+			z-index: 1010;
+		}
+		.navbar-nav-mobile.active {
+			display: flex; /* Show when active */
+		}
+		.navbar-nav-mobile .nav-item {
+			text-align: center;
+			margin: 0;
+			width: 100%;
+		}
+		.navbar-nav-mobile .nav-link {
+			padding: 10px 15px;
+			display: block;
+			color: #333;
+			font-weight: 500;
+			transition: background-color 0.3s ease;
+		}
+		.navbar-nav-mobile .nav-link:hover {
+			background-color: #f8f9fa;
+			color: #007bff;
+		}
+		#main-navbar .navbar-nav {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		#main-navbar .nav-item {
+			margin-left: 25px; /* Spacing between nav items */
+			position: relative;
+		}
+		#main-navbar .nav-link {
+			color: #333; /* Dark text color */
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 16px;
+			transition: color 0.3s ease;
+			padding: 5px 0;
+		}
+		#main-navbar .nav-link:hover,
+		#main-navbar .nav-link.active {
+			color: #007bff; /* Blue on hover/active */
+		}
+		#main-navbar .nav-item::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 1px;
+			height: 100%;
+			background-color: #dee2e6; /* Light grey separator */
+			transform: translateX(-12.5px);
+		}
+		#main-navbar .nav-item:first-child::after {
+			display: none; /* No separator before the first item */
+		}
+		/* Adjust body padding for fixed navbar */
+		body {
+			padding-top: 75px; /* Height of the navbar + some spacing */
+		}
+		@media (max-width: 992px) {
+			#main-navbar .navbar-nav {
+				display: none; /* Hide desktop nav links on small screens */
+			}
+			.hamburger-menu {
+				display: block; /* Show hamburger on mobile */
+				z-index: 1040; /* Ensure it's clickable above other elements */
+			}
+			#main-navbar .navbar-brand img {
+				height: 50px; /* Further increased logo size for tablets */
+			}
+			body {
+				padding-top: 85px; /* Adjusted body padding for bigger mobile navbar */
+			}
+		}
+		@media (max-width: 768px) {
+			#main-navbar .navbar-brand img {
+				height: 45px; /* Further increased logo size for smaller tablets */
+			}
+			body {
+				padding-top: 80px; /* Adjusted body padding for tablets */
+			}
+		}
+		@media (max-width: 480px) {
+			#main-navbar .navbar-brand img {
+				height: 40px; /* Further increased logo size for very small screens */
+			}
+			body {
+				padding-top: 75px; /* Adjusted body padding for very small screens */
+			}
+		}
+		#main-navbar .navbar-brand img {
+			height: 50px; /* Further increased logo size for tablets */
+		}
+	</style>
+	<style>
+		@media (max-width: 991px) {
+			#main-navbar .navbar-brand .hamburger-menu {
+				display: none !important; /* Hide the duplicate hamburger menu */
+			}
+		}
+	</style>
+	<style>
+		@media (max-width: 992px) {
+			#main-navbar .navbar-brand img {
+				height: 60px; /* Significantly increased logo size for tablets */
+			}
+			body {
+				padding-top: 90px; /* Adjusted body padding for bigger mobile navbar */
+			}
+			#main-navbar .container {
+				padding-left: 20px; /* Add padding to center the logo slightly */
+			}
+		}
+		@media (max-width: 768px) {
+			#main-navbar .navbar-brand img {
+				height: 55px; /* Significantly increased logo size for smaller tablets */
+			}
+			body {
+				padding-top: 85px; /* Adjusted body padding for tablets */
+			}
+			#main-navbar .container {
+				padding-left: 15px; /* Add padding to center the logo slightly */
+			}
+		}
+		@media (max-width: 480px) {
+			#main-navbar .navbar-brand img {
+				height: 50px; /* Significantly increased logo size for very small screens */
+			}
+			body {
+				padding-top: 80px; /* Adjusted body padding for very small screens */
+			}
+			#main-navbar .container {
+				padding-left: 10px; /* Add padding to center the logo slightly */
+			}
+		}
+	</style>
+	<style>
+		@media (max-width: 768px) {
+			.sticky-action-buttons .action-btn i {
+				font-size: 34px; /* Increased size for sticky buttons on tablets */
+			}
+		}
+		@media (max-width: 480px) {
+			.sticky-action-buttons .action-btn i {
+				font-size: 28px; /* Increased size for sticky buttons on smaller phones */
+			}
+		}
 	</style>
 </head>
 
@@ -1554,20 +1838,44 @@
 
 	<div id="scroll-progress"><div class="scroll-progress"><span class="scroll-percent"></span></div></div>
 
-	<div class="only-logo">
-		<a href="index.html">
-			<img src="Main File/HTML/images/files/xafeads.avif" alt="XafeAds Logo">
-		</a>
-	</div>
+	<nav id="main-navbar" class="fixed-top">
+		<div class="container">
+			<div class="navbar-brand">
+				<a href="index.html">
+					<img src="Main File/HTML/images/files/logo.png" alt="XafeAds Logo">
+				</a>
+				
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#intro-features" class="nav-link scroll-to">Our Expertise</a></li>
+				<li class="nav-item"><a href="#some-facts" class="nav-link scroll-to">Proven Results</a></li>
+				<li class="nav-item"><a href="#cta-title-1" class="nav-link scroll-to">How It Works</a></li>
+				<li class="nav-item"><a href="#cta-form" class="nav-link scroll-to">Contact Us</a></li>
+			</ul>
+			<ul class="navbar-nav-mobile" id="mobile-nav-links">
+				<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#intro-features" class="nav-link scroll-to">Our Expertise</a></li>
+				<li class="nav-item"><a href="#some-facts" class="nav-link scroll-to">Proven Results</a></li>
+				<li class="nav-item"><a href="#cta-title-1" class="nav-link scroll-to">How It Works</a></li>
+				<li class="nav-item"><a href="#cta-form" class="nav-link scroll-to">Contact Us</a></li>
+			</ul>
+			<button class="hamburger-menu" id="main-hamburger-menu" aria-label="Toggle navigation">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</nav>
 
 	<!-- Document Full Container
 	============================================= -->
 	<div id="full-container">
 
-		
+	
 		<!-- Banner
 		============================================= -->
-		<section id="banner" style="background-image: url('./Main File/HTML/images/files/banner.webp') !important; background-size: cover !important; background-position: center center !important; min-height: 700px !important; position: relative !important; z-index: 0 !important; background-color: transparent !important;">
+		<section id="banner" style="background-image: url('./Main File/HTML/images/files/banner1.webp') !important; background-size: cover !important; background-position: center center !important; min-height: 700px !important; position: relative !important; z-index: 0 !important; background-color: transparent !important;">
 
 			<div class="banner-parallax">
 				<div class="slide-content">
@@ -2168,6 +2476,27 @@
 			window.addEventListener('load', function() {
 				navigator.serviceWorker.register('/sw.js').catch(function(err) {
 					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
+		
+		
+		
+		// Hamburger menu toggle
+		const hamburgerButton = document.getElementById('main-hamburger-menu');
+		const mobileNavLinks = document.getElementById('mobile-nav-links');
+		
+		if (hamburgerButton && mobileNavLinks) {
+			hamburgerButton.addEventListener('click', () => {
+				hamburgerButton.classList.toggle('active');
+				mobileNavLinks.classList.toggle('active');
+			});
+			
+			// Close mobile menu when a link is clicked
+			mobileNavLinks.querySelectorAll('.nav-link').forEach(link => {
+				link.addEventListener('click', () => {
+					hamburgerButton.classList.remove('active');
+					mobileNavLinks.classList.remove('active');
 				});
 			});
 		}
