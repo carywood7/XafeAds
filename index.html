@@ -32,16 +32,16 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="css/css-assets.css" rel="stylesheet" media="all">
-	<link href="css/style.css" rel="stylesheet" media="all">
+	<link href="Main File/HTML/css/css-assets.css" rel="stylesheet" media="all">
+	<link href="Main File/HTML/css/style.css" rel="stylesheet" media="all">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 	<!-- Favicon
 	============================================= -->
-	<link rel="shortcut icon" href="images/general-elements/favicon/favicon.png">
-	<link rel="apple-touch-icon" href="images/general-elements/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/general-elements/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/general-elements/favicon/apple-touch-icon-114x114.png">
+	<link rel="shortcut icon" href="Main File/HTML/images/general-elements/favicon/favicon.png">
+	<link rel="apple-touch-icon" href="Main File/HTML/images/general-elements/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Main File/HTML/images/general-elements/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Main File/HTML/images/general-elements/favicon/apple-touch-icon-114x114.png">
 
 	<!-- Title
 	============================================= -->
@@ -1303,7 +1303,10 @@
 			
 			/* Hide the floating action buttons on mobile since we have the contact bar */
 			.sticky-action-buttons {
-				display: none;
+				display: block; /* Change from none to block */
+				bottom: 80px;  /* Adjust position to be above the mobile contact bar */
+				right: 20px; /* Ensure it's on the right */
+				z-index: 999; /* Ensure it's above other content but below contact bar */
 			}
 		}
 		
@@ -1330,6 +1333,220 @@
 				padding-bottom: 55px;
 			}
 		}
+
+		/* Additional styles for mobile responsiveness */
+		@media (max-width: 768px) {
+			/* Center the banner form */
+			.banner-form {
+				justify-content: center;
+				padding: 0 15px; /* Add some padding to the sides */
+			}
+			
+			/* Adjust logo to prevent overlap */
+			.header-logo {
+				flex-shrink: 0; /* Prevent logo from shrinking */
+				max-width: 120px; /* Set a max-width for the logo container */
+				margin-right: 10px; /* Space between logo and other header elements */
+			}
+			.header-logo img {
+				height: 30px !important; /* Smaller logo on mobile */
+				width: auto !important; /* Maintain aspect ratio */
+			}
+			.hb-content {
+				align-items: center; /* Vertically align items in header */
+				display: flex; /* Ensure flex behavior */
+				width: 100%; /* Take full width */
+				justify-content: space-between; /* Space out items */
+				flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+			}
+			#header .container .row {
+				align-items: center;
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				margin: 0; /* Remove default row margins */
+			}
+			.hb-content .hb-meta {
+				margin-left: auto; /* Push meta content to the right */
+				flex-grow: 1; /* Allow meta to take available space */
+				text-align: right; /* Align text right */
+				min-width: 0; /* Allow text to shrink if necessary */
+				flex-basis: auto; /* Allow meta to take its natural width */
+			}
+			
+			/* Fix for "Proven Results That Drive Business Growth" text */
+			#some-facts .section-title h2 {
+				font-size: 20px; /* Smaller font size */
+				line-height: 1.2; /* Better line spacing */
+				word-wrap: break-word; /* Ensure text wraps */
+				white-space: normal; /* Override no-wrap if any */
+			}
+		}
+		
+		@media (max-width: 480px) {
+			/* Even smaller font size for very small screens */
+			#some-facts .section-title h2 {
+				font-size: 16px; /* Even smaller font for very small devices */
+				line-height: 1.1; /* Tighter line spacing for small screens */
+			}
+			/* Further adjust logo for very small screens if needed */
+			.header-logo {
+				max-width: 100px; /* Adjust max-width for smaller screens */
+			}
+			.header-logo img {
+				height: 25px !important; /* Even smaller logo height */
+			}
+			.hb-content .hb-meta {
+				font-size: 10px; /* Smaller font size for meta text */
+				flex-basis: 100%; /* Force meta to new line on very small screens */
+				text-align: center; /* Center text when on new line */
+				margin-top: 5px; /* Add some space above meta when wrapped */
+				margin-left: 0; /* Remove auto margin when wrapped */
+			}
+			/* Ensure header bar itself is also responsive to content */
+			#header-bar-1 .header-bar-wrap {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+
+			/* Adjust overall header spacing for very small screens */
+			#header .header-bar {
+				padding-top: 10px; /* Add more padding to push content down */
+				padding-bottom: 10px;
+			}
+			
+			/* Center the banner form explicitly for small screens */
+			.banner-form {
+				justify-content: center;
+				padding: 0 15px;
+				margin-left: auto;
+				margin-right: auto;
+				display: block; /* Change to block to allow margin auto to work */
+				max-width: 400px; /* Ensure it doesn't get too wide */
+			}
+		}
+		
+		/* Global fixed header padding for content below */
+		#header {
+			position: fixed; /* Ensure header is fixed */
+			top: 0;
+			left: 0; /* Ensure it sticks to the left */
+			width: 100%;
+			z-index: 1000; /* Ensure it's on top */
+			background-color: #fff; /* Ensure it has a background */
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: add a subtle shadow */
+		}
+		@media (max-width: 768px) {
+			body {
+				padding-top: 60px; /* Adjust this value based on actual header height */
+			}
+			.header-logo {
+				margin-right: 0; /* Remove right margin for top-left positioning */
+			}
+			.hb-content {
+				justify-content: flex-start; /* Align items to the start for top-left logo */
+			}
+			.hb-content .hb-meta {
+				margin-left: auto; /* Keep meta content pushed to the right */
+				text-align: right; /* Keep text aligned right */
+			}
+		}
+		
+		@media (max-width: 480px) {
+			body {
+				padding-top: 55px; /* Adjust for smaller header height on very small screens */
+			}
+		}
+		.only-logo {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			z-index: 1001;
+		}
+		.only-logo img {
+			height: 40px;
+		}
+		@media (max-width: 768px) {
+			.only-logo {
+				top: 15px;
+				left: 15px;
+			}
+			.only-logo img {
+				height: 30px;
+			}
+		}
+		@media (max-width: 480px) {
+			.only-logo {
+				top: 10px;
+				left: 10px;
+			}
+			.only-logo img {
+				height: 25px;
+			}
+		}
+		/* Ensure banner-parallax has position relative to contain the absolute image */
+		section#banner {
+			background-image: url('./Main File/HTML/images/files/banner.webp');
+			background-size: cover;
+			background-position: center center;
+			min-height: 700px; /* Ensure sufficient height */
+			position: relative; /* Needed for z-index context if content is layered */
+			z-index: 0; /* Ensure it doesn't get hidden by other elements with higher z-index */
+		}
+		/* Adjust the faintness of the banner image using a pseudo-element overlay */
+		section#banner::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 255, 255, 0.3); /* Increased white overlay for more faintness */
+			z-index: -1; /* Position above the background image but below content */
+		}
+		html, body, #full-container, .banner-parallax {
+			background-color: transparent !important;
+		}
+		/* Ensure heading and description text is visible */
+		.banner-center-box h1,
+		.banner-center-box .description {
+			color: #000 !important; /* Even darker text for maximum visibility */
+			font-weight: 900 !important; /* Extra bold for emphasis */
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for contrast */
+		}
+		/* Ensure no overlay makes the banner image faint */
+		#banner .overlay-colored, #banner .overlay-pattern {
+			opacity: 0 !important;
+			background-color: transparent !important;
+		}
+
+		/* Adjust base font sizes for better visibility on larger screens */
+		.banner-center-box h1 {
+			font-size: 52px !important; /* Larger font for main heading */
+			line-height: 1.1 !important;
+		}
+		.banner-center-box .description {
+			font-size: 22px !important; /* Larger font for description */
+			line-height: 1.4 !important;
+		}
+
+		@media (max-width: 1200px) {
+			.banner-center-box h1 {
+				font-size: 48px !important;
+			}
+			.banner-center-box .description {
+				font-size: 20px !important;
+			}
+		}
+
+		@media (max-width: 992px) {
+			.banner-center-box h1 {
+				font-size: 40px !important;
+			}
+			.banner-center-box .description {
+				font-size: 18px !important;
+			}
+		}
 	</style>
 </head>
 
@@ -1337,58 +1554,29 @@
 
 	<div id="scroll-progress"><div class="scroll-progress"><span class="scroll-percent"></span></div></div>
 
+	<div class="only-logo">
+		<a href="index.html">
+			<img src="Main File/HTML/images/files/xafeads.avif" alt="XafeAds Logo">
+		</a>
+	</div>
+
 	<!-- Document Full Container
 	============================================= -->
 	<div id="full-container">
 
-		<!-- Header
-		============================================= -->
-		<header id="header">
-
-			<div id="header-bar-1" class="header-bar">
-
-				<div class="header-bar-wrap">
-
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-
-								<div class="hb-content">
-									
-									<div class="header-logo">
-										<a href="index-leadgen-1.html">
-											<img src="./images/files/xafeads.avif" alt="XafeAds Logo" style="height: 40px; margin-right: 15px;">
-										</a>
-									</div><!-- .header-logo end -->
-									
-									<div class="hb-meta">
-									</div><!-- .hb-meta end -->
-								</div><!-- .hb-content end -->
-
-							</div><!-- .col-md-12 end -->
-						</div><!-- .row end -->
-					</div><!-- .container end -->
-
-				</div><!-- .header-bar-wrap -->
-
-			</div><!-- #header-bar-1 end -->
-
-		</header><!-- #header end -->
-	
+		
 		<!-- Banner
 		============================================= -->
-		<section id="banner">
+		<section id="banner" style="background-image: url('./Main File/HTML/images/files/banner.webp') !important; background-size: cover !important; background-position: center center !important; min-height: 700px !important; position: relative !important; z-index: 0 !important; background-color: transparent !important;">
 
-			<div class="banner-parallax" data-banner-height="700">
-				<img src="http://via.placeholder.com/1920x1100?text=Image" alt="">
-				<div class="overlay-colored color-bg-gradient opacity-90"></div><!-- .overlay-colored end -->
+			<div class="banner-parallax">
 				<div class="slide-content">
 
 					<div class="container">
 						<div class="row">
 							<div class="col-md-7">
 
-								<div class="banner-center-box text-white md-text-center">
+								<div class="banner-center-box md-text-center">
 									<h1 class="animated fadeInDown" style="animation-delay: 0.2s">
 										Unlock Reliable Ad Compliance with XafeAds
 									</h1>
@@ -1441,11 +1629,7 @@
 					</div><!-- .container end -->
 
 				</div><!-- .slide-content end -->
-				<div class="section-separator wave-1 bottom">
-					<div class="ss-content">
-						<img class="svg" src="images/general-elements/section-separators/wave-1.svg" alt="">
-					</div><!-- .ss-content -->
-				</div><!-- .section-separator -->				
+				
 			</div><!-- .banner-parallax end -->
 
 		</section><!-- #banner end -->
@@ -1644,7 +1828,7 @@
 										</p>
 									</div><!-- .section-title end -->
 									
-									<div class="row mt-50">
+									<div class="row mt-50" style="display: flex; flex-wrap: wrap; align-items: stretch;">
 										<div class="col-md-3 col-sm-6">
 											<div class="stat-box text-center">
 												<div class="stat-number">
@@ -1933,19 +2117,19 @@
 
 	<!-- External JavaScripts - Optimized Loading
 	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/jRespond.min.js" defer></script>
-	<script src="js/jquery.easing.min.js" defer></script>
-	<script src="js/jquery.waypoints.min.js" defer></script>
-	<script src="js/jquery.fitvids.js" defer></script>
-	<script src="js/jquery.stellar.js" defer></script>
-	<script src="js/owl.carousel.min.js" defer></script>
-	<script src="js/jquery.mb.YTPlayer.min.js" defer></script>
-	<script src="js/jquery.magnific-popup.min.js" defer></script>
-	<script src="js/jquery.ajaxchimp.min.js" defer></script>
-	<script src="js/jquery.validate.min.js" defer></script>
-	<script src="js/simple-scrollbar.min.js" defer></script>
-	<script src='js/functions.js' defer></script>
+	<script src="Main File/HTML/js/jquery.js"></script>
+	<script src="Main File/HTML/js/jRespond.min.js" defer></script>
+	<script src="Main File/HTML/js/jquery.easing.min.js" defer></script>
+	<script src="Main File/HTML/js/jquery.waypoints.min.js" defer></script>
+	<script src="Main File/HTML/js/jquery.fitvids.js" defer></script>
+	<script src="Main File/HTML/js/jquery.stellar.js" defer></script>
+	<script src="Main File/HTML/js/owl.carousel.min.js" defer></script>
+	<script src="Main File/HTML/js/jquery.mb.YTPlayer.min.js" defer></script>
+	<script src="Main File/HTML/js/jquery.magnific-popup.min.js" defer></script>
+	<script src="Main File/HTML/js/jquery.ajaxchimp.min.js" defer></script>
+	<script src="Main File/HTML/js/jquery.validate.min.js" defer></script>
+	<script src="Main File/HTML/js/simple-scrollbar.min.js" defer></script>
+	<script src='Main File/HTML/js/functions.js' defer></script>
 	
 	<!-- Performance Optimization Script -->
 	<script>

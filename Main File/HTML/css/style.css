@@ -1518,7 +1518,6 @@ input[type="submit"].form-control:focus {
 ============================== */
 .banner-parallax {
   position: relative;
-  background-color: #fff;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -1534,8 +1533,6 @@ input[type="submit"].form-control:focus {
     transition: opacity 0.5s; }
     .banner-parallax > .bg-element.appeared {
       opacity: 1; }
-    .banner-parallax > .bg-element + img {
-      display: none; }
   .banner-parallax > .overlay-pattern {
     opacity: 0;
     transition: opacity 0.5s; }

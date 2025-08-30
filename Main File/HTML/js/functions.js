@@ -14,7 +14,7 @@ $( document ).on( "ready" , function() {
 	lightboxGallery();
 	lightboxIframe();
 	scrollToAnchor();
-	bannerParallaxImageBG();
+	// bannerParallaxImageBG();
 	sectionParallaxImageBG();
 	sliderClients();
 	sliderBoxesFeatures1();
@@ -302,6 +302,7 @@ function bannerParallaxImageBG() {
 	bannerParallax.prepend( "<div class='bg-element'></div>" );
 	var bgElement = bannerParallax.find( "> .bg-element" );
 	bgElement.css( "background-image", "url('" + imgSrc + "')"  ).attr( "data-stellar-background-ratio" , 0.2 );
+	bgElement.addClass('appeared'); // Ensure the element becomes visible
 }
 
 
