@@ -2868,3 +2868,16 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
   align-items: center;
   justify-content: center;
 }
+/* Form responsive fix */
+@media (max-width: 768px) {
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* spacing between fields */
+  }
+
+  .form-row input,
+  .form-row select {
+    width: 100%;
+  }
+}
