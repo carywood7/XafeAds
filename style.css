@@ -2871,13 +2871,13 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
 /* Form responsive fix */
 @media (max-width: 768px) {
   .form-row {
-    display: flex;
-    flex-direction: column;
-    gap: 16px; /* spacing between fields */
+    display: block !important;
   }
 
   .form-row input,
-  .form-row select {
-    width: 100%;
+  .form-row select,
+  .form-row textarea {
+    width: 100% !important;
+    margin-bottom: 15px;
   }
 }
