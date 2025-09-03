@@ -2546,3 +2546,325 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
      font-size: 14px;
    }
  }
+ /* ...all your existing styles ... */
+
+
+/* ========================= */
+/* Hero CTA Button Overrides */
+/* ========================= */
+/* Scoped only to hero CTA buttons */
+/* ========================= */
+/* Hero CTA Button Overrides */
+/* ========================= */
+/* Improve hero CTA buttons */
+/* ========================= */
+/* Hero CTA Button Overrides */
+/* ========================= */
+.hero .cta-group .btn {
+  all: unset; /* reset global .btn styles */
+  display: inline-block;
+  font-size: 16px;               /* slightly larger */
+  font-weight: 600;
+  padding: 16px 32px;            /* more comfortable spacing */
+  border-radius: 9999px;         /* pill shape */
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08); /* subtle depth */
+}
+
+/* Left button (primary: blue → white on hover) */
+.hero .cta-group .btn:first-child {
+  background: linear-gradient(135deg, var(--blue), var(--blue-hover));
+  color: #fff;
+  border: 2px solid var(--blue);
+}
+.hero .cta-group .btn:first-child:hover {
+  background: #fff;
+  color: var(--blue);
+  box-shadow: 0 6px 20px rgba(37,99,235,0.25); /* glow */
+}
+
+/* Right button (secondary: white → blue on hover) */
+.hero .cta-group .btn:last-child {
+  background: #fff;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+.hero .cta-group .btn:last-child:hover {
+  background: linear-gradient(135deg, var(--blue), var(--blue-hover));
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(37,99,235,0.25);
+}
+/* Simple form layout */
+/* White card style for form */
+.simple-form {
+  display: grid;
+  gap: 20px;                         /* more space between fields */
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  max-width: 500px;                  /* prevent form from being too wide */
+  margin: 0 auto;                    /* center it */
+}
+
+/* Form heading */
+.simple-form .form-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--ink);
+  text-align: center;
+}
+
+/* Form row spacing */
+.simple-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;                         /* spacing between two inputs */
+}
+
+/* Input, select, textarea */
+.simple-form input,
+.simple-form select,
+.simple-form textarea {
+  width: 100%;
+  padding: 14px 16px;                /* more padding inside */
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.4;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.simple-form textarea {
+  min-height: 100px;                 /* taller textarea */
+  resize: vertical;
+}
+
+.simple-form input:focus,
+.simple-form select:focus,
+.simple-form textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+
+.simple-form textarea {
+  resize: vertical;
+}
+
+.simple-form .cta-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+/* SLA confirmation message */
+.sla-message {
+  margin-top: 16px;
+  text-align: center;
+  color: #4b5563; /* neutral gray */
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.hidden {
+  display: none;
+}
+/* Best For section */
+.best-for {
+  padding: 60px 0;
+  background: #f9fafb; /* light background */
+}
+
+.best-for .section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.best-for .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  align-items: stretch; /* make all cards equal height */
+}
+
+.best-for .card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;              /* flexbox layout */
+  flex-direction: column;     /* stack content vertically */
+}
+
+.best-for .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.1);
+}
+
+.best-for .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--blue);
+}
+
+.best-for .card p {
+  font-size: 15px;
+  color: #4b5563;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  flex-grow: 1; /* take available space, pushes button to bottom */
+}
+
+.best-for .card .btn {
+  margin-top: auto;             /* push to bottom */
+  align-self: center;           /* center horizontally */
+  border-radius: 9999px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  width: auto;                  /* button only as wide as its text */
+  display: inline-block;        /* prevent stretching */
+}
+
+/* Proven Results */
+/* Proven Results */
+.proven-results {
+  padding: 70px 0;               /* taller section */
+  background: #111827;            /* dark background */
+  color: #fff;
+  text-align: center;
+}
+
+.proven-results .section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #fff;                    /* force title to be white */
+}
+
+.proven-results .results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+}
+
+.proven-results .result-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px 24px;              /* larger padding inside cards */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.proven-results .result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.3);
+}
+
+.proven-results .result-card h3 {
+  font-size: 36px;                 /* bigger numbers */
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--blue);              /* highlight */
+}
+
+.proven-results .result-card p {
+  font-size: 16px;
+  color: #e5e7eb;                  /* lighter gray for readability */
+}
+/* ======================== */
+/* Ad Policies Section      */
+/* ======================== */
+.ad-policies {
+  padding: 80px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.ad-policies .section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.ad-policies .policies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.ad-policies .policy-card {
+  background: #fff;
+  border-left: 5px solid var(--blue); /* accent left border */
+  border-radius: 8px;
+  padding: 20px 20px 20px 28px;       /* extra left padding so text doesn’t touch border */
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ad-policies .policy-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+
+.ad-policies .policy-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.ad-policies .policy-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4b5563;
+}
+/* Simplified Process Section */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.process-step {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-hover));
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
