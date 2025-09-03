@@ -2885,7 +2885,7 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
     box-sizing: border-box;
   }
 }
-/* --- Fix cramped form fields --- */
+
 .form-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
