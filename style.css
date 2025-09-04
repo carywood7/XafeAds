@@ -1689,15 +1689,7 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
  }
  
  .process-flow::before {
-   content: '';
-   position: absolute;
-   top: 50%;
-   left: 0;
-   right: 0;
-   height: 2px;
-   background: linear-gradient(90deg, #e5e7eb, #d1d5db, #e5e7eb);
-   transform: translateY(-50%);
-   z-index: 1;
+ display: none;
  }
  
  .flow-step {
@@ -2837,11 +2829,36 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
 /* Simplified Process Section */
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  text-align: center;
+  grid-template-columns: repeat(5, 1fr); /* always 5 columns */
+  gap: 30px;
+  align-items: stretch; /* make all items same height */
 }
 
+.process-step {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.process-step h3 {
+  margin: 16px 0;
+  min-height: 48px; /* keeps headings the same height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-step p {
+  flex-grow: 1; /* makes paragraph take remaining space */
+  display: flex;
+  align-items: flex-start; /* align top */
+  justify-content: center;
+}
 .process-step {
   background: #fff;
   padding: 32px 24px;
@@ -2856,17 +2873,17 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
 }
 
 .step-number {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto 20px;
   background: linear-gradient(135deg, var(--blue), var(--blue-hover));
   color: #fff;
   font-weight: 700;
-  font-size: 20px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 18px;
 }
 /* Form responsive fix */
 /* Force form fields to stack on mobile */
@@ -2961,5 +2978,303 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
     font-size: 15px;
     padding: 14px;
     text-align: center;
+  }
+}
+.new-line{
+  display: block;
+}
+.process-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px; /* space between rows */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* space between steps */
+}
+
+.process-step {
+  width: 260px;
+  min-height: 240px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.step-number {
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+/* Arrows between steps in the top row (01 → 02 → 03) */
+.top-row .process-step:not(:last-child) {
+  position: relative;
+}
+.top-row .process-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* Arrow between 04 → 05 */
+.bottom-row .process-step:first-child {
+  position: relative;
+}
+.bottom-row .process-step:first-child::after {
+  content: "→";
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #2563eb;
+  font-weight: bold;
+}
+.process-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* rows */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+/* step boxes */
+.process-step {
+  flex: 1 1 260px; /* shrink/grow, min width 260px */
+  max-width: 300px;
+  min-height: 220px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* step number */
+.step-number {
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+/* arrows between steps */
+.top-row .process-step:not(:last-child)::after,
+.bottom-row .process-step:first-child::after {
+  content: "→";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* make sure each step is positioned relative */
+.process-step {
+  position: relative;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
+  .top-row, .bottom-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .process-step::after {
+    content: none !important; /* hide arrows on small screens */
+  }
+}
+/* === Process Flow Layout === */
+.process-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.process-step {
+  width: 260px;           /* fixed equal width */
+  min-height: 240px;      /* equal height */
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;     /* required for arrows */
+}
+
+.step-number {
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* Arrows only in correct places */
+.top-row .process-step:not(:last-child)::after,
+.bottom-row .process-step:first-child::after {
+  content: "→";
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* 📱 Responsive: stack on mobile */
+@media (max-width: 900px) {
+  .row {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .process-step {
+    width: 100%;
+  }
+  .process-step::after {
+    content: none !important;
+  }
+}
+/* === 5 Step Flow All in One Row === */
+.process-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* always 5 in a row on desktop */
+  gap: 30px;
+  width: 100%;
+  margin-left: -5px;
+  align-items: stretch
+}
+
+
+.process-step {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px; /* ensures same height */
+}
+
+.step-number {
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+/* arrows between steps */
+.process-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.process-step {
+  position: relative;
+}
+
+/* 📱 Responsive for smaller screens */
+@media (max-width: 1100px) {
+  .process-flow {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .process-step::after {
+    content: none !important; /* hide arrows on small screens */
+  }
+}
+/* Desktop: shift left */
+.process-flow {
+  transform: translateX(-40px);
+}
+
+/* Tablet: smaller shift */
+@media (max-width: 1024px) {
+  .process-flow {
+    transform: translateX(-20px);
+  }
+}
+
+/* Mobile: no shift */
+@media (max-width: 768px) {
+  .process-flow {
+    transform: none;
   }
 }
