@@ -2948,3 +2948,18 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
 .simple-form p {
   margin-bottom: 12px;  /* was 20–30px */
 }
+/* Fix form buttons on mobile */
+@media (max-width: 768px) {
+  .form-container .cta-group {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .form-container .cta-group .btn {
+    width: 100%;
+    max-width: 100%;
+    font-size: 15px;
+    padding: 14px;
+    text-align: center;
+  }
+}
