@@ -30,7 +30,7 @@ a:hover { text-decoration:underline }
    padding: 32px 24px; 
  }
    .section { 
-   padding: 120px 0; 
+   padding: 80px 0; 
    position: relative;
  }
  
@@ -299,7 +299,7 @@ p { margin: 0 0 16px; }
 
 /* Logo styling */
 .nav .logo {
-  height: 60px;
+  height: 80px;
   width: auto;
   display: block;
 }
@@ -442,6 +442,7 @@ p { margin: 0 0 16px; }
 }
 
 .hero h1 { margin-bottom:16px }
+
 .hero .cta {
   justify-content: flex-start; /* Align CTA buttons to the left within the content div */
 }
@@ -2734,7 +2735,7 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
 /* Proven Results */
 .proven-results {
   padding: 70px 0;               /* taller section */
-  background: #111827;            /* dark background */
+  background: #578cff;            /* dark background */
   color: #fff;
   text-align: center;
 }
@@ -2769,12 +2770,12 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
   font-size: 36px;                 /* bigger numbers */
   font-weight: 700;
   margin-bottom: 12px;
-  color: var(--blue);              /* highlight */
+  color: black;              /* highlight */
 }
 
 .proven-results .result-card p {
   font-size: 16px;
-  color: #e5e7eb;                  /* lighter gray for readability */
+  color: black;                  /* lighter gray for readability */
 }
 /* ======================== */
 /* Ad Policies Section      */
@@ -3424,18 +3425,7 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
   border-color: #2563EB;
 }
 
-/* Large faded quote mark background */
-.testimonial-card::after {
-  content: "“";
-  font-size: 5rem;
-  color: #2563EB;
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  opacity: 0.08;
-  font-family: Georgia, serif;
-  pointer-events: none;
-}
+
 
 .testimonial-text {
   font-size: 1.2rem;
@@ -3478,3 +3468,178 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
   letter-spacing: 0.3px;
 }
 
+/* Proven Results Section */
+#proven-results {
+  background:#1D4ED8; /* keep section blue */
+  color: #fff; /* ensure text inside defaults to white */
+}
+
+#proven-results .result-card {
+  background: #fff; /* make cards white */
+  color: var(--ink); /* dark text inside */
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#proven-results .result-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+.brand-section {
+  text-align: center;
+  padding: 50px 0;
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+}
+
+.brand-section h2 {
+  font-size: 24px;
+  color:black;
+  margin-bottom: 30px;
+}
+
+.brand-slider {
+  overflow: hidden;
+  position: relative;
+  max-width: 80%;   /* 👈 controls total space logos take */
+  margin: 0 auto;   /* center align */
+}
+
+.brand-track {
+  display: flex;
+  width: max-content;  /* 👈 only as wide as logos */
+  animation: scroll 20s linear infinite;
+}
+
+.brand-track img {
+  width: 160px;          /* fixed width */
+  height: 160px;         /* fixed height */
+  object-fit: contain;   /* keep logo ratio, no crop */
+  margin: 0 15px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Animation */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+/* Tighter spacing between sections on mobile */
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0;  /* instead of 80px */
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0;  /* instead of 60px */
+  }
+}
+
+/* Default desktop (keep inline) */
+#hero-title .line1,
+#hero-title .line2 {
+  display: inline;
+}
+
+/* On mobile, force line break */
+@media (max-width: 768px) {
+  #hero-title .line1,
+  #hero-title .line2 {
+    display: block;
+  }
+  #hero-title .line1 {
+  
+    margin-bottom: 6px;
+    display: block;
+  font-size: 15px;       /* smaller subheading */
+  font-weight: 500;      /* lighter than main */
+  color: #e0e0e0;        /* softer gray/secondary color */
+
+  }
+  #hero-title .line2 {
+    font-size: 30px;
+  }
+}
+.hero h1 {
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero h1 .line1 {
+  display: block;
+  font-size: clamp(20px, 2.5vw, 28px); /* smaller subheading */
+  font-weight: 500;
+  color: #e5e7eb; /* lighter shade of white */
+  margin-bottom: 8px;
+}
+
+.hero h1 .line2 {
+  display: block;
+  font-size: clamp(32px, 5vw, 60px); /* bigger main heading */
+  font-weight: 700;
+  color: #fff;
+}
+/* Force hero heading lines to break */
+#hero-title .line1,
+#hero-title .line2 {
+  display: block !important;  /* overrides inline */
+}
+
+#hero-title .line1 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #e5e7eb;
+  margin-bottom: 6px;
+}
+
+#hero-title .line2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+}
+.quote-mark {
+  font-size: 80px;
+  font-weight: bold;
+  color: #2079ff; /* red */
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+/* Push text down so it doesn’t overlap the quote */
+.testimonial-text {
+  margin-top: 50px;
+  font-style: italic;
+}
+
+.author {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.author-logo {
+  max-height: 40px;
+  margin-top: 10px;
+}
+#process {
+  padding: 0px 0;
+}
+.ad-policies{
+  padding: 20px 0;
+}
+#results{
+  padding: 20px 0;
+}
+#why{
+  padding: 20px 0;
+}
