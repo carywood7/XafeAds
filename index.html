@@ -446,25 +446,31 @@
   });
 </script>
 
-    <style>
-#chat-widget {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-#chat-box {
-  width: 300px;
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-</style>
+    <!-- ===== AI Chatbot (Leads Trackr) ===== -->
+<div id="lt-chat">
+  <button id="lt-chat-toggle" aria-label="Open chat">💬</button>
+
+  <div id="lt-chat-box" aria-live="polite" aria-label="Chat window" hidden>
+    <div id="lt-chat-header">
+      <strong>AI Assistant</strong>
+      <button id="lt-chat-close" aria-label="Close chat">✕</button>
+    </div>
+
+    <div id="lt-chat-messages"></div>
+
+    <form id="lt-chat-form" autocomplete="off">
+      <input id="lt-chat-input" type="text" placeholder="Ask me anything…" required />
+      <button id="lt-chat-send" type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
 
 
 </body>
 
 </html>
+
 
 
 
