@@ -3643,3 +3643,17 @@ label { display:block; font-weight:600; margin:6px 0 3px; /* Adjusted margin */ 
 #why{
   padding: 20px 0;
 }
+
+#chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#chat-box {
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
