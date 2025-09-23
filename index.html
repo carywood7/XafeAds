@@ -370,41 +370,6 @@
   </div>
 </footer>
 
-  <-- AI Chatbot --->
-
-<div id="chat-widget">
-  <button id="chat-toggle">💬</button>
-  <div id="chat-box" style="display:none;">
-    <div id="messages" style="height:200px;overflow-y:auto;border:1px solid #ccc;padding:10px;margin-bottom:5px;"></div>
-    <input id="chat-input" type="text" placeholder="Ask me anything..." style="width:80%;">
-    <button id="send-btn">Send</button>
-  </div>
-</div>
-
-<script>
-  const toggle = document.getElementById("chat-toggle");
-  const box = document.getElementById("chat-box");
-  const input = document.getElementById("chat-input");
-  const messages = document.getElementById("messages");
-
-  toggle.onclick = () => box.style.display = box.style.display === "none" ? "block" : "none";
-
-  document.getElementById("send-btn").onclick = async () => {
-    const text = input.value;
-    messages.innerHTML += `<div><b>You:</b> ${text}</div>`;
-    input.value = "";
-
-    const res = await fetch("https://your-backend.com/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: text })
-    });
-
-    const data = await res.json();
-    messages.innerHTML += `<div><b>Bot:</b> ${data.reply}</div>`;
-  };
-</script>
-
   
      <!-- Floating Action Buttons -->
    <!--<div class="fab-container">
@@ -452,7 +417,7 @@
 
   <div id="lt-chat-box" aria-live="polite" aria-label="Chat window" hidden>
     <div id="lt-chat-header">
-      <strong>AI Assistant</strong>
+      <strong>Hi this is Neha</strong>
       <button id="lt-chat-close" aria-label="Close chat">✕</button>
     </div>
 
@@ -470,6 +435,7 @@
 </body>
 
 </html>
+
 
 
 
