@@ -411,30 +411,84 @@
   });
 </script>
 
-    <!-- ===== AI Chatbot (Leads Trackr) ===== -->
-<div id="lt-chat">
-  <button id="lt-chat-toggle" aria-label="Open chat">💬</button>
-
-  <div id="lt-chat-box" aria-live="polite" aria-label="Chat window" hidden>
-    <div id="lt-chat-header">
-      <strong>Hi this is Neha</strong>
-      <button id="lt-chat-close" aria-label="Close chat">✕</button>
+    <!-- ===== AI Chatbot widget ===== -->
+  <div id="lt-chat">
+    <button id="lt-chat-toggle" aria-label="Open chat">💬</button>
+    <div id="lt-chat-box" hidden>
+      <div id="lt-chat-header">
+        <strong>AI Assistant</strong>
+        <button id="lt-chat-close" aria-label="Close chat">✕</button>
+      </div>
+      <div id="lt-chat-messages"></div>
+      <form id="lt-chat-form">
+        <input id="lt-chat-input" type="text" placeholder="Ask me anything…" required />
+        <button id="lt-chat-send" type="submit">Send</button>
+      </form>
     </div>
-
-    <div id="lt-chat-messages"></div>
-
-    <form id="lt-chat-form" autocomplete="off">
-      <input id="lt-chat-input" type="text" placeholder="Ask me anything…" required />
-      <button id="lt-chat-send" type="submit">Send</button>
-    </form>
   </div>
-</div>
+
+  <!-- ===== Chatbot script (must be at the end of body) ===== -->
+  <script>
+  (() => {
+    const toggle  = document.getElementById('lt-chat-toggle');
+    const box     = document.getElementById('lt-chat-box');
+    const close   = document.getElementById('lt-chat-close');
+    const form    = document.getElementById('lt-chat-form');
+    const input   = document.getElementById('lt-chat-input');
+    const sendBtn = document.getElementById('lt-chat-send');
+    const msgs    = document.getElementById('lt-chat-messages');
+
+    const BACKEND_URL = 'https://YOUR-BACKEND-URL/chat'; // replace with your API URL
+
+    const openChat  = () => { box.hidden = false; input.focus(); };
+    const closeChat = () => { box.hidden = true; };
+
+    toggle.addEventListener('click', openChat);
+    close.addEventListener('click', closeChat);
+
+    function addMessage(text, who) {
+      const div = document.createElement('div');
+      div.className = `lt-msg ${who === 'me' ? 'lt-me' : 'lt-bot'}`;
+      div.textContent = text;
+      msgs.appendChild(div);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    async function sendMessage(text) {
+      addMessage(text, 'me');
+      sendBtn.disabled = true;
+      try {
+        const res = await fetch(BACKEND_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text })
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        addMessage(data.reply || 'Sorry, I could not respond.', 'bot');
+      } catch (e) {
+        addMessage('Network error. Please try again.', 'bot');
+      } finally {
+        sendBtn.disabled = false;
+      }
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+      sendMessage(text);
+    });
+  })();
+  </script>
 
 
 
 </body>
 
 </html>
+
 
 
 
